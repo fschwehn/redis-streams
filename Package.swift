@@ -11,7 +11,7 @@ let package = Package(
     products: [
         .library(
             name: "RedisStreams",
-            targets: ["redis-streams"]),
+            targets: ["RedisStreams"]),
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.17.0"),
@@ -19,13 +19,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "redis-streams",
+            name: "RedisStreams",
             dependencies: [
                 "RediStack",
                 .product(name: "NIO", package: "swift-nio"),
         ]),
         .testTarget(
-            name: "redis-streamsTests",
-            dependencies: ["redis-streams"]),
+            name: "RedisStreamsTests",
+            dependencies: ["RedisStreams"]),
     ]
 )
