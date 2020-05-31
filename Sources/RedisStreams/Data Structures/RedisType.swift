@@ -32,3 +32,5 @@ extension RedisType: RESPValueConvertible {
     }
 
 }
+
+extension RedisType: RESPDecodable {}
